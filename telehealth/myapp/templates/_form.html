@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="{% static 'styles/output.css' %}">
 </head>
 
-<body>
-  {% block content %}
-  {% endblock content %}
+<body class="flex justify-center bg-gray-100 pt-32">
+  <div class="w-full max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow">
+    {% block content %}
+    {% endblock content %}
+  </div>
 </body>
 
 </html>

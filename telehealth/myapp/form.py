@@ -20,7 +20,7 @@ class RegistrationForm(forms.ModelForm):
           
 
 class SettingsForm(forms.Form):
-    first_name = forms.CharField(
+    first_name = forms.CharField(   
         max_length=64,
         widget=forms.TextInput(attrs={'placeholder': 'Enter your first name'})
     )
