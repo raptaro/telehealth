@@ -3,49 +3,56 @@
 {% block content %}
 <!--
 <div>
-  <p>Welcome, {{request.user.username}}!</p>
   <a href="{% url 'protected' %}">Go To Your Protected Page!</a>
 </div>
 -->
 
-<main class="ml-64 flex-1 p-4">
+<main class="ml-64 flex-1">
   <div class="rounded-lg bg-white p-6 shadow dark:bg-gray-800">
     <!--p tags to move the content cause the fixed navbar won't allow me to use margin top-->
-    <p class="mt-4 text-gray-700 dark:text-gray-300">Your content goes here.</p>
-    <p class="mt-4 text-gray-700 dark:text-gray-300"></p>
-    <p>Good Day, {{request.user.username}}!</p>
+    <p class="mt-4 p-4 text-gray-700 dark:text-gray-300"></p>
+    <p class="text-2xl font-bold">
+      Good Day, <span class="text-blue-500">{{request.user.username}}</span>
+    </p>
     <p>Check out the latest updates from the past 7 days!</p>
   </div>
 
-  <div class="flex flex-row pt-16">
-    <a href="#"
-      class="block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+  <!-- cards -->
+  <div class="flex flex-col gap-4 p-4">
+    <a href="#" class="card">
 
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-        acquisitions
-        2021</h5>
-      <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of
-        2021 so far, in reverse chronological order.</p>
+      <p class="card-title">Total Patient</p>
+      <p class="card-content">84</p>
+      <p class="card-note">
+        <span class="text-red-500">↓ -17.65%</span> Since last week
+      </p>
     </a>
 
-    <a href="#"
-      class="block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <a href="#" class="card">
 
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-        acquisitions
-        2021</h5>
-      <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of
-        2021 so far, in reverse chronological order.</p>
+      <p class="card-title">Today's Appointment</p>
+      <p class="card-content">4</p>
+      <p class="card-note">
+        Next Appointment - <span class="text-blue-500">10:00 AM</span>
+      </p>
     </a>
 
-    <a href="#"
-      class="block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <a href="#" class="card">
 
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-        acquisitions
-        2021</h5>
-      <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of
-        2021 so far, in reverse chronological order.</p>
+      <p class="card-title">Patient Request</p>
+      <p class="card-content">10</p>
+      <p class="card-note">
+        <span class="text-blue-500">+2</span> Appointment
+      </p>
+    </a>
+
+    <a href="#" class="card">
+
+      <p class="card-title">Inventory Updates</p>
+      <p class="card-content">84</p>
+      <p class="card-note">
+        <span class="text-red-500">↓ -17.65%</span> Since last week
+      </p>
     </a>
 
   </div>
