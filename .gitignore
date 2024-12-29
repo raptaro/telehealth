@@ -50,3 +50,4 @@ htmlcov/
 *.cover
 *.coverage
 .cache/
+/venv
